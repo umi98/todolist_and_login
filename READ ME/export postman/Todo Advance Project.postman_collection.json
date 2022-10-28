@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "d391b576-5df7-4df2-ace8-adbd8e6f07ce",
+		"name": "Todo Advance Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1442816"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "ayu@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "yes",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2Njc2MjM0MiwiZXhwIjoxNjY2NzY1OTQyLCJuYmYiOjE2NjY3NjIzNDIsImp0aSI6IlY4ZldnbjZrSzRKdGVJTHciLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.g6AwM8OwSs45v75neM5vtCPbQSjUrrC9r0HFENrGtMo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2Njc2MjM0MiwiZXhwIjoxNjY2NzY1OTQyLCJuYmYiOjE2NjY3NjIzNDIsImp0aSI6IlY4ZldnbjZrSzRKdGVJTHciLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.g6AwM8OwSs45v75neM5vtCPbQSjUrrC9r0HFENrGtMo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzMTMyMiwiZXhwIjoxNjY2OTM0OTIyLCJuYmYiOjE2NjY5MzEzMjIsImp0aSI6ImNTNFVNVHhreGJjaVhsZE4iLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ayyK7MqgNYqO1wuzZPqDPIqqkqZMwQx6SfX2K9NOYZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "kucing",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kucing@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "meong",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "See All Tasks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzMTMyMiwiZXhwIjoxNjY2OTM0OTIyLCJuYmYiOjE2NjY5MzEzMjIsImp0aSI6ImNTNFVNVHhreGJjaVhsZE4iLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ayyK7MqgNYqO1wuzZPqDPIqqkqZMwQx6SfX2K9NOYZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo/showtask",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"showtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzMTMyMiwiZXhwIjoxNjY2OTM0OTIyLCJuYmYiOjE2NjY5MzEzMjIsImp0aSI6ImNTNFVNVHhreGJjaVhsZE4iLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ayyK7MqgNYqO1wuzZPqDPIqqkqZMwQx6SfX2K9NOYZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Task 9",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Akeh e talah ;)",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo/addtask",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"addtask"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzNjUzOCwiZXhwIjoxNjY2OTQwMTM4LCJuYmYiOjE2NjY5MzY1MzgsImp0aSI6Ik5ySTZGVTN2V1B2SVF3WGQiLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KKmpeZ6pw-_8maIK0YQMMpy6YEpDOM6u6ldhAygSuaI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo/viewtask/635b6504dc5d92f03801700c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"viewtask",
+						"635b6504dc5d92f03801700c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzNjUzOCwiZXhwIjoxNjY2OTQwMTM4LCJuYmYiOjE2NjY5MzY1MzgsImp0aSI6Ik5ySTZGVTN2V1B2SVF3WGQiLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KKmpeZ6pw-_8maIK0YQMMpy6YEpDOM6u6ldhAygSuaI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Ini task 9 ya",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Deskripsinya dirubah dungs",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo/updatetask/635b3d51dc5d92f038017002",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"updatetask",
+						"635b3d51dc5d92f038017002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY2NjkzNjUzOCwiZXhwIjoxNjY2OTQwMTM4LCJuYmYiOjE2NjY5MzY1MzgsImp0aSI6Ik5ySTZGVTN2V1B2SVF3WGQiLCJzdWIiOiI2MzU4YzQ5NzBiNWQ3MDUyZGYwMzMyNjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KKmpeZ6pw-_8maIK0YQMMpy6YEpDOM6u6ldhAygSuaI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/todo/deletetask/635b6504dc5d92f03801700c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"todo",
+						"deletetask",
+						"635b6504dc5d92f03801700c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

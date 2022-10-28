@@ -1,0 +1,16 @@
+List username & password
+-------------------------------
+| email		   | password |
+-------------------------------
+| ayu@gmail.com    | yes      |
+| kucing@gmail.com | meong    |
+| budi@yahoo.com   | oke      |
+-------------------------------
+
+
+Kekurangan:
+1. Tidak fungsi hapus dan edit data untuk user
+2. User bisa register walaupun ada yang sedang login
+3. Semua user dapat melihat, menambah, mengubah, dan menghapus semua task
+
+Last checked 2022-10-28 19:00 WIB - Success
